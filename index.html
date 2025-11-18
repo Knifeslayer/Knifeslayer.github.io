@@ -1,11 +1,132 @@
+<!-- index.html (Landing Page) -->
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Joseph Webber | Author</title>
-  </head>
-  <body>
-    <h1>Hello — It works!</h1>
-    <p>This is the start of your author website.</p>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Joseph Webber | Author</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7;}
+    header {background:#111; color:#fff; padding:20px; text-align:center;}
+    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+    .container {display:flex; justify-content:center; padding:20px; gap:20px;}
+    .left {width:30%; background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1);}    
+    .right {width:60%; background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1);}  
+    .progress {margin:10px 0;}
+    .progress label {font-weight:bold;}
+    .bar {height:20px; background:#ddd; border-radius:5px; overflow:hidden;}
+    .bar-fill {height:100%; background:#4caf50; width:50%;} /* change width as needed */
+    footer {text-align:center; padding:20px; color:#555; margin-top:20px;}
+    .newsletter-btn {display:block; margin-top:20px; padding:10px; background:#0073e6; color:white; text-align:center; border-radius:5px; text-decoration:none; font-weight:bold;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Joseph Webber</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="left">
+    <h2>Book Progress</h2>
+
+    <div class="progress">
+      <label>Book 1: Toby the Monster Hunter</label>
+      <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
+    </div>
+
+    <div class="progress">
+      <label>Book 2: Draft</label>
+      <div class="bar"><div class="bar-fill" style="width:20%"></div></div>
+    </div>
+
+    <a class="newsletter-btn" href="YOUR_GOOGLE_FORM_LINK" target="_blank">Sign Up for Newsletter</a>
+  </div>
+
+  <div class="right">
+    <h2>Latest Updates</h2>
+    <p>This is where you can add news, chapter updates, project logs, or blog-style posts. Just replace this text with whatever you've been working on.</p>
+  </div>
+</div>
+
+<footer>
+  © 2025 Joseph Webber — All Rights Reserved
+</footer>
+</body>
+</html>
+
+
+
+<!-- about.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>About | Joseph Webber</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7;}
+    header {background:#111; color:#fff; padding:20px; text-align:center;}
+    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+    .content {max-width:800px; margin:40px auto; background:white; padding:20px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1);} 
+    footer {text-align:center; padding:20px; color:#555; margin-top:20px;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>About the Author</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="content">
+  <h2>Joseph Webber</h2>
+  <p>Write your author bio here — who you are, what you write, your themes, inspiration, writing journey, etc.</p>
+</div>
+
+<footer>© 2025 Joseph Webber</footer>
+</body>
+</html>
+
+
+
+<!-- contact.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Joseph Webber</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7;}
+    header {background:#111; color:#fff; padding:20px; text-align:center;}
+    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+    .content {max-width:800px; margin:40px auto; background:white; padding:20px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1);} 
+    footer {text-align:center; padding:20px; color:#555; margin-top:20px;}
+    .contact-link {font-size:18px; background:#0073e6; color:white; padding:10px 15px; text-decoration:none; border-radius:6px;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Contact</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="content">
+  <h2>Get in Touch</h2>
+  <p>You can reach me through my author email or by using the newsletter form to stay updated.</p>
+
+  <a class="contact-link" href="mailto:YOUR_EMAIL@joseph-webber.com">Email Me</a>
+</div>
+
+<footer>© 2025 Joseph Webber</footer>
+</body>
 </html>
