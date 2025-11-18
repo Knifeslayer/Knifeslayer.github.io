@@ -1,59 +1,45 @@
-<!-- index.html (Landing Page) -->
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Joseph Webber | Author</title>
-  <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7;}
-    header {background:#111; color:#fff; padding:20px; text-align:center;}
-    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
-    .container {display:flex; justify-content:center; padding:20px; gap:20px;}
-    .left {width:30%; background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1);}    
-    .right {width:60%; background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1);}  
-    .progress {margin:10px 0;}
-    .progress label {font-weight:bold;}
-    .bar {height:20px; background:#ddd; border-radius:5px; overflow:hidden;}
-    .bar-fill {height:100%; background:#4caf50; width:50%;} /* change width as needed */
-    footer {text-align:center; padding:20px; color:#555; margin-top:20px;}
-    .newsletter-btn {display:block; margin-top:20px; padding:10px; background:#0073e6; color:white; text-align:center; border-radius:5px; text-decoration:none; font-weight:bold;}
-  </style>
+<meta charset="utf-8">
+<title>Joseph Webber | Author</title>
+<style>
+body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7;}
+.container {display:flex; justify-content:center; padding:20px; gap:20px;}
+.left {width:30%; background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1);}
+.right {width:60%; background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1);}
+.news-item {margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid #ddd;}
+.progress {margin:10px 0;}
+.progress label {font-weight:bold;}
+.bar {height:20px; background:#ddd; border-radius:5px; overflow:hidden;}
+.bar-fill {height:100%; background:#4caf50; width:50%;}
+.newsletter-btn {display:block; margin-top:20px; padding:10px; background:#0073e6; color:white; text-align:center; border-radius:5px; text-decoration:none; font-weight:bold;}
+</style>
+<script>
+function loadFragment(id, file) {
+fetch(file).then(r => r.text()).then(t => document.getElementById(id).innerHTML = t);
+}
+window.onload = () => {
+loadFragment('header', 'header.html');
+loadFragment('footer', 'footer.html');
+loadFragment('newsFeed', 'news.html');
+loadFragment('booksProgress', 'books.html');
+};
+</script>
 </head>
 <body>
-<header>
-  <h1>Joseph Webber</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<div id="header"></div>
+
 
 <div class="container">
-  <div class="left">
-    <h2>Book Progress</h2>
-
-    <div class="progress">
-      <label>Book 1: Toby the Monster Hunter</label>
-      <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
-    </div>
-
-    <div class="progress">
-      <label>Book 2: Draft</label>
-      <div class="bar"><div class="bar-fill" style="width:20%"></div></div>
-    </div>
-
-    <a class="newsletter-btn" href="YOUR_GOOGLE_FORM_LINK" target="_blank">Sign Up for Newsletter</a>
-  </div>
-
-  <div class="right">
-    <h2>Latest Updates</h2>
-    <p>This is where you can add news, chapter updates, project logs, or blog-style posts. Just replace this text with whatever you've been working on.</p>
-  </div>
+<div class="left" id="booksProgress"></div>
+<div class="right">
+<h2>Latest Updates</h2>
+<div id="newsFeed"></div>
+</div>
 </div>
 
-<footer>
-  © 2025 Joseph Webber — All Rights Reserved
-</footer>
+
+<div id="footer"></div>
 </body>
 </html>

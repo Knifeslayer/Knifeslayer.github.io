@@ -12,16 +12,18 @@
     footer {text-align:center; padding:20px; color:#555; margin-top:20px;}
     .contact-link {font-size:18px; background:#0073e6; color:white; padding:10px 15px; text-decoration:none; border-radius:6px;}
   </style>
+    <script>
+function loadFragment(id, file) {
+fetch(file).then(r => r.text()).then(t => document.getElementById(id).innerHTML = t);
+}
+window.onload = () => {
+loadFragment('header', 'header.html');
+loadFragment('footer', 'footer.html');
+};
+</script>
 </head>
 <body>
-<header>
-  <h1>Contact</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<div id="header"></div>
 
 <div class="content">
   <h2>Get in Touch</h2>
@@ -30,6 +32,7 @@
   <a class="contact-link" href="mailto:YOUR_EMAIL@joseph-webber.com">Email Me</a>
 </div>
 
-<footer>© 2025 Joseph Webber</footer>
+
+<div id="footer"></div>
 </body>
 </html>
